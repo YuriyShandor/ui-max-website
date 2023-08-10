@@ -1,6 +1,8 @@
+'use client';
+
 import Image from 'next/image';
 import styles from './header.module.scss';
-import WebsiteLogo from 'public/website-logo.svg';
+import WebsiteLogo from '@/../public/website-logo.png';
 import ThemeToggle from '@/components/ThemeToggle/ThemeToggle';
 
 const Header = () => {

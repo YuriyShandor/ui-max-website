@@ -1,6 +1,6 @@
 'use client';
 
-import { PropsWithChildren, createContext, useState } from 'react';
+import {PropsWithChildren, createContext, useState} from 'react';
 
 export const DARK_THEME = 'dark';
 export const LIGHT_THEME = 'light';
@@ -20,16 +20,12 @@ export const ThemeProvider = (props: PropsWithChildren) => {
   const [theme, setTheme] = useState<ThemeType>(DARK_THEME);
 
   const toggleTheme = () => {
-    console.log(theme);
-
     setTheme((prev) => (prev === DARK_THEME ? LIGHT_THEME : DARK_THEME));
   };
 
   return (
-    <ThemeContext.Provider
-      value={{ activeTheme: theme, toggleTheme: toggleTheme }}
-    >
-      {props.children}
+    <ThemeContext.Provider value={{activeTheme: theme, toggleTheme: toggleTheme}}>
+      <div className={`theme ${theme}`}>{props.children}</div>
     </ThemeContext.Provider>
   );
 };

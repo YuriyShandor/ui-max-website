@@ -1,4 +1,4 @@
-.container{
+.themeToggle {
   width: 42px;
   height: 24px;
   border: 1.5px solid #53c28b70;
@@ -9,13 +9,17 @@
   padding: 2px;
   position: relative;
   cursor: pointer;
+  transition: all, 0.25s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.icon{
+.themeToggleIcon {
   font-size: 12px;
+  position: absolute;
+  top: 2px;
 }
 
-.ball{
+.themeToggleIcon {
   width: 15px;
   height: 15px;
   background-color: #53c28b;

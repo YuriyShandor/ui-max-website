@@ -11,19 +11,17 @@ export const metadata: Metadata = {
   description: 'Example of using Next.js',
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <ThemeProvider>
-        <body className={inter.className}>
+      <body className={`body ${inter.className}`}>
+        <ThemeProvider>
           <Header />
           {children}
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

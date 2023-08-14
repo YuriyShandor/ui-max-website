@@ -1,19 +1,80 @@
-$color-primary: #0070f3;
-
-.homePage {
+.header {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all, 0.25s;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.heading {
-  font-size: 47px;
-  color: $color-primary;
+.headerContainer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  padding: 10px 16px;
+  transition: all, 0.25s;
+  -webkit-tap-highlight-color: transparent;
+
+  &.isScrolling {
+    height: 60px;
+    border-bottom: 1px solid #e4e4e4;
+  }
 }
 
 .headerLogo {
-  position: relative;
   width: 186px;
   height: 58px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.headerButtons {
+  display: flex;
+  align-items: center;
+}
+
+.headerBurger {
+  width: 40px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-right: 7px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: all, 0.25s;
+  -webkit-tap-highlight-color: transparent;
+
+  div {
+    height: 3px;
+    background: #737373;
+    margin-bottom: 3px;
+    transition: all, 0.25s;
+    -webkit-tap-highlight-color: transparent;
+
+    &:first-child {
+      width: 27px;
+    }
+
+    &:nth-child(2) {
+      width: 20px;
+    }
+
+    &:last-child {
+      width: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    div {
+      background: $blue;
+      width: 27px;
+    }
+  }
 }

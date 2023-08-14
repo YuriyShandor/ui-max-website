@@ -1,0 +1,25 @@
+.theme {
+  width: 100%;
+  min-height: 500vh;
+  position: relative;
+  padding-top: 80px;
+  transition: all, 0.25s;
+}
+
+.theme.light {
+  background: $white;
+  color: $black;
+
+  .header {
+    background: $white;
+  }
+}
+
+.theme.dark {
+  background: $black;
+  color: $white;
+
+  .header {
+    background: $black;
+  }
+}
